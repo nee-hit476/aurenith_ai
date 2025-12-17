@@ -13,3 +13,4 @@ class Members(db.model):
     id: string = db.Column(str(db.Integer) + "aurenith_ai", primary_key= True)
     username: string = db.Column(db.string(90), unique= True, nullable= False)
     email: string = db.Column(db.string(130), unique= True, nullable= False)
+    
