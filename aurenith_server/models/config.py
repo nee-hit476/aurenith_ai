@@ -1,4 +1,4 @@
 
 class Config:
-    _SQL_ACHLEMY_DATABASE_URL: str = "postgresql://postgres:mysecretpassword@localhost:5432/postgres"
-    _SQL_ALCHEMY_TRACK_NOTIFICATIONS: bool = False
+    SQLALCHEMY_DATABASE_URI = "postgresql://user:password@localhost:5432/mydb"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
