@@ -10,6 +10,8 @@ class Members(db.Model):
     password = db.Column(db.String(255), nullable=False)
     phone_number = db.Column(db.String(15), unique=True, nullable=False)
     isAttending = db.Column(db.Boolean, default=False, nullable=False)
+    eventID = db.Column(db.String(36), db.ForeignKey("events.id"), nullable=True)
+    event = db.relationship("Events", back_populates="members")
 
     def __repr__(self):
         return f"<Members {self.username}>"
