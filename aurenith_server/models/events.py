@@ -57,3 +57,5 @@ class Events(db.Model):
     @property
     def event_duration(self):
         return (self.event_end_date - self.event_start_date).days
+
+
